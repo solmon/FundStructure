@@ -1,8 +1,4 @@
-# [ngBoilerplate](http://joshdmiller.github.com/ng-boilerplate) [![Build Status](https://travis-ci.org/joshdmiller/ng-boilerplate.png?branch=master)](https://travis-ci.org/joshdmiller/ng-boilerplate)
-
-An opinionated kickstarter for [AngularJS](http://angularjs.org) projects.
-
-***
+An project for Private Equity Fund Management.
 
 ## Quick Start
 
@@ -19,51 +15,10 @@ $ grunt watch
 
 Finally, open `build/index.html` in your browser.
 
-Happy hacking!
-
 ## Purpose
 
-`ngBoilerplate` is designed to make life easy by providing a basic framework
-with which to kickstart AngularJS projects. It contains a best-practice
-directory structure to ensure code reusability and maximum scalability.
-ngBoilerplate also comes prepackaged with the most popular design frameworks
-around: [Twitter Bootstrap](http://getbootstrap.com),
-[Angular UI](http://angular-ui.github.io),
-[Angular Bootstrap](http://angular-ui.github.io/bootstrap),
-[Font Awesome](http://fortawesome.github.com/Font-Awesome), and
-[LESS](http://lesscss.org). Lastly, it contains a sophisticated
-[Grunt](http://gruntjs.org)-based build system to ensure maximum productivity.
-All you have to do is clone it and start coding!
-
-## Philosophy
-
-The principal goal of `ngBoilerplate` is to set projects up for long-term
-success.  So `ngBoilerplate` tries to follow best practices everywhere it can.
-These are:
-
-- Properly orchestrated modules to encourage drag-and-drop component re-use.
-- Tests exist alongside the component they are testing with no separate `test`
-  directory required; the build process should be sophisticated enough to handle
-  this.
-- Speaking of which, the build system should work automagically, without
-  involvement from the developer. It should do what needs to be done, while
-  staying out of the way. Components should end up tested, linted, compiled,
-  and minified, ready for use in a production environment.
-- Integration with popular tools like Bower, Karma, and LESS.
-- *Encourages* test-driven development. It's the only way to code.
-- A directory structure that is cogent, meaningful to new team members, and
-  supporting of the above points.
-- Well-documented, to show new developers *why* things are set up the way they
-  are.
-- It should be responsive to evidence. Community feedback is therefore crucial
-  to the success of `ngBoilerplate`.
-
-But `ngBoilerplate` is not an example of an AngularJS app: this is a
-kickstarter. If you're looking for an example of what a complete, non-trivial
-AngularJS app that does something real looks like, complete with a REST backend
-and authentication and authorization, then take a look at
-[`angular-app`](http://github.com/angular-app/angular-app), which does just
-that - and does it well.
+`Fund Structure` is designed to make life easy by providing a basic framework
+for private equity fund management.
 
 ## Learn
 
@@ -125,7 +80,7 @@ learn more.
 ### Detailed Installation
 
 This section provides a little more detailed understanding of what goes into
-getting `ngBoilerplate` up and running. Though `ngBoilerplate` is really simple
+getting `Fund Structure` up and running. Though `Fund Structure` is really simple
 to use, it might help to have an understanding of the tools involved here, like
 Node.js and Grunt and Bower. If you're completely new to highly organized,
 modern JavaScript development, take a few short minutes to read [this overview
@@ -133,7 +88,7 @@ of the tools](tools.md) before continuing with this section.
 
 Okay, ready to go? Here it is:
 
-`ngBoilerplate` uses [Grunt](http://gruntjs.org) as its build system, so
+`Fund Structure` uses [Grunt](http://gruntjs.org) as its build system, so
 [Node.js](http://nodejs.org) is required. Also, Grunt by default no longer comes
 with a command-line utility and Karma and Bower must end up in your global path
 for the build system to find it, so they must be installed independently. Once
@@ -165,7 +120,7 @@ This will read the `dependencies` (empty by default) and the `devDependencies`
 (which contains our build requirements) from `package.json` and install
 everything needed into a folder called `node_modules/`.
 
-There are many Bower packages used by `ngBoilerplate`, like Twitter Bootstrap
+There are many Bower packages used by `Fund Structure`, like Twitter Bootstrap
 and Angular UI, which are listed in `bower.js`. To install them into the
 `vendor/` directory, simply run:
 
@@ -186,7 +141,7 @@ application (or we download it from a different computer), we can simply run the
 `bower install` command as above and all our dependencies will be installed for
 us. Neat!
 
-Technically, `ngBoilerplate` is now ready to go.
+Technically, `Fund Structure` is now ready to go.
 
 However, prior to hacking on your application, you will want to modify the
 `package.json` file to contain your project's information. Do not remove any
@@ -242,7 +197,7 @@ $ grunt
 The best way to learn about the build system is by familiarizing yourself with
 Grunt and then reading through the heavily documented build script,
 `Gruntfile.js`. But you don't need to do that to be very productive with
-`ngBoilerplate`. What follows in this section is a quick introduction to the
+`Fund Structure`. What follows in this section is a quick introduction to the
 tasks provided and should be plenty to get you started.
 
 The driver of the process is the `delta` multi-task, which watches for file
@@ -316,7 +271,7 @@ expected, open the `bin/index.html` file in your browser. Voila!
 
 ### Live Reload!
 
-`ngBoilerplate` also includes [Live Reload](http://livereload.com/), so you no
+`Fund Structure` also includes [Live Reload](http://livereload.com/), so you no
 longer have to refresh your page after making changes! You need a Live Reload
 browser plugin for this:
 
@@ -326,7 +281,7 @@ browser plugin for this:
 - Internet Explorer - Surely you jest.
 
 Note that if you're using the Chrome version with `file://` URLs (as is the
-default with `ngBoilerplate`) you need to tell Live Reload to allow it. Go to
+default with `Fund Structure`) you need to tell Live Reload to allow it. Go to
 `Menu -> Tools -> Extensions` and check the "Allow access to file URLs" box next
 to the Live Reload plugin.
 
@@ -336,46 +291,4 @@ everything should work magically. w00t!
 If you'd prefer to not install a browser extension, then you must add the
 following to the end of the `body` tag in `index.html`:
 
-```html
-<script src="http://localhost:35729/livereload.js"></script>
-```
-
-Boom!
-
-## Roadmap
-
-This is a project that is not broad in scope, so there's not really much of a
-wish list here. But I would like to see a couple of things:
-
-I'd like it to be a little simpler. I want this to be a universal starting
-point. If someone is starting a new AngularJS project, she should be able to
-clone, merge, or download its source and immediately start doing what she needs
-without renaming a bunch of files and methods or deleting spare parts. What I
-have works for a first release, but I just think there is a little too much here
-right now.
-
-I'd also like to see a simple generator. Nothing like Yeoman, as there already
-is one of those, but just something that allows the user to say "I want
-Bootstrap but not Font Awesome and my app is called 'coolApp'. Gimme." Perhaps a
-custom download builder like UI Bootstrap has. Like that. Then again, perhaps
-some Yeoman generators wouldn't be out of line. I don't know. What do you think?
-
-Naturally, I am open to all manner of ideas and suggestions. See the
-"Contributing" section below.
-
-### To Do
-
-See the [issues list](http://github.com/joshdmiller/ng-boilerplate/issues). And
-feel free to submit your own!
-
-### Contributing
-
-This is an opinionated kickstarter, but the opinions are fluid and
-evidence-based. Don't like the way I did something? Think you know of a better
-way? Have an idea to make this more useful? Let me know! You can contact me
-through all the usual channels or you can open an issue on the GitHub page. If
-you're feeling ambitious, you can even submit a pull request - how thoughtful
-of you!
-
-So join the team! We're good people.
 
